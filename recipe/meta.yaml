@@ -1,5 +1,5 @@
 {% set name = "flake8-no-implicit-concat" %}
-{% set version = "0.3.7" %}
+{% set version = "0.3.8" %}
 
 
 package:
@@ -7,12 +7,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 8472f2a6ddb11980e9bc35aa289d051e36d1e69c66ecd0fe5f5406ff8ab91e3a
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 13e812a14c56bfd2e007552d6cd1a12843d591455f046c1a1a5911003e188479
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
